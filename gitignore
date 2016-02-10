@@ -1,0 +1,9 @@
+/Debug
+/Release
+desktop.ini
+/*.stackdump
+.settings
+.cproject
+*.sdf
+*.opensdf
+*.swp
