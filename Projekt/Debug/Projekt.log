@@ -1,0 +1,99 @@
+﻿  Graph.cpp
+  Unknown compiler version - please run the configure tests and report the results
+c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(78): warning C4800: 'const char': forcing value to bool 'true' or 'false' (performance warning)
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(927): note: see reference to function template instantiation 'bool boost::detail::get_edge_exists<char>(const EdgeProxy &,...)' being compiled
+          with
+          [
+              EdgeProxy=char
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(947): note: see reference to function template instantiation 'std::pair<boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,bool> boost::add_edge<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>,EP>(unsigned int,unsigned int,const EP2 &,boost::adjacency_matrix<Directed,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>> &)' being compiled
+          with
+          [
+              Directed=boost::undirectedS,
+              EP=boost::no_property,
+              EP2=boost::no_property
+          ]
+  c:\users\winmo\documents\github\zbpgprahs\projekt\graph.cpp(55): note: see reference to function template instantiation 'std::pair<boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,bool> boost::add_edge<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>(unsigned int,unsigned int,boost::adjacency_matrix<Directed,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>> &)' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  Exploration.cpp
+  Unknown compiler version - please run the configure tests and report the results
+c:\users\winmo\documents\github\zbpgprahs\projekt\exploration.cpp(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\winmo\documents\github\zbpgprahs\projekt\exploration.cpp(53): warning C4838: conversion from 'int' to 'size_t' requires a narrowing conversion
+  DFSnormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  DFSboost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(78): warning C4800: 'const char': forcing value to bool 'true' or 'false' (performance warning)
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(285): note: see reference to function template instantiation 'bool boost::detail::get_edge_exists<char>(const EdgeProxy &,...)' being compiled
+          with
+          [
+              EdgeProxy=char
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(284): note: while compiling class template member function 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const'
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\iterator\iterator_facade.hpp(514): note: see reference to function template instantiation 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(571): note: see reference to class template instantiation 'boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\detail\iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\iterator\iterator_categories.hpp(161): note: see reference to class template instantiation 'boost::detail::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\iterator\filter_iterator.hpp(33): note: see reference to class template instantiation 'boost::iterator_traversal<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\iterator\filter_iterator.hpp(45): note: see reference to class template instantiation 'boost::detail::filter_iterator_base<Predicate,Iterator>' being compiled
+          with
+          [
+              Predicate=boost::detail::does_edge_exist,
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(571): note: see reference to class template instantiation 'boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\detail\iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_iterator.hpp(55): note: see reference to class template instantiation 'boost::detail::iterator_traits<OutEdgeIter>' being compiled
+          with
+          [
+              OutEdgeIter=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  c:\users\winmo\desktop\boost_1_55_0\boost_1_55_0\boost\graph\adjacency_matrix.hpp(569): note: see reference to class template instantiation 'boost::adjacency_iterator_generator<boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>,unsigned int,boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo\documents\github\zbpgprahs\projekt\dfsboost.cpp(21): note: see reference to class template instantiation 'boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>' being compiled
+  DataExp.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  BFSnormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  BeginExploration.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Generating Code...
+  Projekt.vcxproj -> C:\Users\winmo\Documents\GitHub\ZBPGprahs\Debug\Projekt.exe

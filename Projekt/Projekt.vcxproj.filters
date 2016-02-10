@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Graph">
+      <UniqueIdentifier>{62dfc645-e7df-45da-beb8-bc5fa3bd1a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Experiment">
+      <UniqueIdentifier>{951f7e64-7a9b-45c9-9258-fdc276139e77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Experiment">
+      <UniqueIdentifier>{530e0f08-b11f-4acd-bd8c-1e715d4f46f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Search">
+      <UniqueIdentifier>{4db4244c-49db-4575-be69-9a1428ba5a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Search">
+      <UniqueIdentifier>{0e54303c-ce63-4d14-aa83-bf5ed8ffce85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="baseGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="BeginExploration.h">
+      <Filter>Header Files\Experiment</Filter>
+    </ClInclude>
+    <ClInclude Include="DFSnormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="DFSboost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BFSnormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BFSboost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="DataExp.h">
+      <Filter>Header Files\Experiment</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploration.h">
+      <Filter>Header Files\Experiment</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstraNormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstraBoost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="FloydWarshallNormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="FloydWarshallBoost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Projekt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BeginExploration.cpp">
+      <Filter>Source Files\Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="DFSnormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="DFSboost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="BFSnormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="DataExp.cpp">
+      <Filter>Source Files\Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploration.cpp">
+      <Filter>Source Files\Experiment</Filter>
+    </ClCompile>
+    <ClCompile Include="BFSboost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstraBoost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstraNormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="FloydWarshallNormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="FloydWarshallBoost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
