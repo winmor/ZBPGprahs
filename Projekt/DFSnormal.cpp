@@ -41,4 +41,6 @@ void DFSnormal(std::shared_ptr<Graph> graph, int i, int j)
 	depthFirst(graph->standardGraph(), Visited, graph->size());
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
+	
+	delete[] Visited;
 }

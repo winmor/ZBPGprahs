@@ -1,6 +1,6 @@
 
 #include "Graph.h"
-#include <algorithm>
+
 
 
 
@@ -62,6 +62,7 @@ std::shared_ptr<Graph::boostNoWeightedGraph> Graph::boostSimpleGraph()
 
 std::shared_ptr<Graph::boostWeightGraph> Graph::boostWeightedGraph()
 {
+	
 	if (!matrixBoostWeightedGraph)
 	{
 		Graph::boostWeightGraph* p = new boostWeightGraph();
@@ -122,6 +123,11 @@ const size_t Graph::size()
 	return mSize;
 }
 
+const int Graph::fill()
+{
+	return mFill;
+}
+
 void Graph::setExpTime(int i, int j, double value)
 {
 	duration[i][j] = value;
@@ -166,6 +172,7 @@ void Graph::freeGraphStandard()
 void Graph::freeGraphBoost()
 {
 	matrixBoostSimpleGraph.reset();
+	matrixBoostWeightedGraph.reset();
 }
 
 void Graph::freeAll()

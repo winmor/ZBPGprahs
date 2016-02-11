@@ -2,6 +2,7 @@
 #define GRAPH_GENERATOR_H_
 
 #include <limits.h>
+
 #include <boost/graph/adjacency_matrix.hpp>
 #include <boost/graph/adjacency_list.hpp>
 #include "baseGraph.h"
@@ -43,6 +44,7 @@ public:
 	Graph(size_t size, int fill);
 	void print();
 	const size_t size();
+	const int fill();
 	void setExpTime(int i, int j, double value);
 	double calcBothTime(int j);
 	double printTime(int i, int j);

@@ -16,8 +16,8 @@ typedef std::vector<std::shared_ptr<Graph>> GraphVector;
 
 Duration DFSexperiment(GraphVector graphs);
 Duration BFSexperiment(GraphVector graphs);
-//Duration bellmanExperiment(GraphVector graphs);
-//Duration floydWarshalExperiment(GraphVector graphs);
-//Duration dijkstraExperiment(GraphVector graphs);
-//Duration johnsonExperiment(GraphVector graphs);
+Duration bellmanFordExperiment(GraphVector graphs);
+Duration floydWarshallExperiment(GraphVector graphs);
+Duration dijkstraExperiment(GraphVector graphs);
+Duration johnsonExperiment(GraphVector graphs);
 #endif

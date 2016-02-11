@@ -33,9 +33,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -78,6 +75,18 @@
     <ClInclude Include="FloydWarshallBoost.h">
       <Filter>Header Files\Search</Filter>
     </ClInclude>
+    <ClInclude Include="JohnsonNormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="JohnsonBoost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BellmanFordNormal.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BellmanFordBoost.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Projekt.cpp">
@@ -117,6 +126,18 @@
       <Filter>Source Files\Search</Filter>
     </ClCompile>
     <ClCompile Include="FloydWarshallBoost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="JohnsonNormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="JohnsonBoost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="BellmanFordNormal.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="BellmanFordBoost.cpp">
       <Filter>Source Files\Search</Filter>
     </ClCompile>
   </ItemGroup>
