@@ -9,14 +9,14 @@ void BellmanFordNormal(std::shared_ptr<Graph> graph, int i, int j)
 	BellmanFord(G, 0, graph->size(), d);
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
-//#ifdef _DEBUG
-//	if (d.empty())
-//		std::cout << "Wykryto ujemny cykl" << std::endl;
-//	else {
-//		for (int i = 0; i < d.size(); ++i)
-//			std::cout << 0 << " --> " << i << " : " << d[i] << std::endl;
-//	}
-//#endif
+#ifdef _DEBUG
+	if (d.empty())
+		std::cout << "Wykryto ujemny cykl" << std::endl;
+	else {
+		for (int i = 0; i < d.size(); ++i)
+			std::cout << 0 << " --> " << i << " : " << d[i] << std::endl;
+	}
+#endif
 }
 
 bool BellmanFord(base::graphMatrix G, unsigned int source, size_t n, std::vector<double>& d)

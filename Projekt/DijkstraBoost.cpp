@@ -20,13 +20,13 @@ void dijkstraBoost(std::shared_ptr<Graph> graph, int i, int j)
 	
 	graph->setExpTime(i, j, timeSpan.count());
 	
-#ifdef DEBUG
-	std::cout << odleglosci i rodzice : "<< std::endl;
+#ifdef _DEBUG
+	std::cout << "odleglosci i rodzice : "<< std::endl;
 		graph_traits<Graph::boostWeightGraph>::vertex_iterator vi, vend;
-	for (tie(vi, vend) = vertices(g); vi != vend, vi++)
+		for (tie(vi, vend) = vertices(g); vi != vend; ++vi)
 	{
 		std::cout << "odleglosc(" << *vi << ") =" << distance[*vi] << ", ";
-		std::cout << "rodzic(" << *vi << ") =" << parent[*vi] << ", ";
+		std::cout << "rodzic(" << *vi << ") =" << parent[*vi] << std::endl;
 	}
 	std::cout << std::endl;
 #endif // DEBUG

@@ -5,12 +5,17 @@
 #include <boost/graph/depth_first_search.hpp>
 #include "Graph.h"
 #include <chrono>
-
+#ifdef _DEBUG
+#include <iostream>
+#endif
 class DFSVisitor : public boost::default_dfs_visitor {
 public:
 	template<typename Vertex, typename Graph>
-	void discoverVertex(Vertex u, const Graph & g) const {}
-
+	void discover_vertex(Vertex u, const Graph & g) const {
+#ifdef _DEBUG
+	std::cout << u << " ";
+#endif
+	}
 };
 
 void DFSBoost(std::shared_ptr<Graph> graph, int i, int j)

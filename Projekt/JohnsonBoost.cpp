@@ -16,15 +16,16 @@
 
 void JohnsonBoost(std::shared_ptr<Graph> graph, int i, int j)
 {
-	Graph::boostWeightGraph g = *graph->boostWeightedGraph();
 	using namespace std::chrono;
 	high_resolution_clock::time_point begin = high_resolution_clock::now();
+	Graph::boostWeightGraph g = *graph->boostWeightedGraph();
+	
 	typedef boost::multi_array<base::weight, 2> array_type;
 	array_type D(boost::extents[graph->size()][graph->size()]);
 	johnson_all_pairs_shortest_paths(g, D);
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
-#ifdef DEBUG
+#ifdef _DEBUG
 	int V = num_vertices(g);
 	std::cout << "       ";
 	for (int k = 0; k < V; ++k)

@@ -9,7 +9,7 @@
 
 
 bool johnson(base::graphMatrix G, unsigned int source, size_t n, std::vector<std::vector<double>>& d) {
-
+	
 	//init
 	d.clear();
 	std::vector<double> h;
@@ -18,7 +18,7 @@ bool johnson(base::graphMatrix G, unsigned int source, size_t n, std::vector<std
 	size_t size_G2 = n + 1;
 
 	base::graphMatrix G2 = new base::weight*[size_G2];
-	base::weight* s = new base::weight[size_G2];
+	base::weight* s = new base::weight[size_G2]{};
 	G2[0] = s;
 
 	for (unsigned int i = 0; i < n; i++)
@@ -32,8 +32,11 @@ bool johnson(base::graphMatrix G, unsigned int source, size_t n, std::vector<std
 		}
 	}
 	//ujemne cykle
-	if (!BellmanFord(G2, 0, size_G2, h));
+	if (!BellmanFord(G2, 0, size_G2, h))
 		return false;
+
+		
+
 
 	//nieujemne wartosci krawedzi w grafie G
 	for (unsigned int u = 0; u < n; u++)
@@ -49,28 +52,30 @@ bool johnson(base::graphMatrix G, unsigned int source, size_t n, std::vector<std
 	//obliczanie wartosci macierzy d
 	for (unsigned int u = 0; u < n; u++)
 	{ 
-		std::vector<double> k;
+	std::vector<double> k;
 	d.push_back(k);
 	dijkstra(G, u, n, d[u]);
-	for (unsigned int v = 0; v < n; v++)
-	{
-		d[u][v] = d[u][v] + h[v + 1] - h[u + 1];
-	}
+		for (unsigned int v = 0; v < n; v++)
+		{
+			d[u][v] = d[u][v] + h[v + 1] - h[u + 1];
+		}
 	}
 	return true;
 }
 void JohnsonNormal(std::shared_ptr<Graph> graph , int i, int j)
 {
-	base::graphMatrix G = graph->standardGraph();
 	using namespace std::chrono;
 	high_resolution_clock::time_point begin = high_resolution_clock::now();
+	base::graphMatrix G = graph->standardGraph();
+	
 	std::vector<std::vector<double>> D;
 	johnson(G, 0, graph->size(), D);
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
+	
 
 #ifdef _DEBUG
-	int V = graph->size();
+		int V = graph->size();
 	std::cout << "       ";
 	for (int k = 0; k < V; ++k)
 		std::cout << std::setw(5) << k;

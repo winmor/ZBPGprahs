@@ -16,6 +16,10 @@ void breadthFirst(base::graphMatrix Graph, bool *Visited, size_t n)
 		int s = kolejka.front();
 		kolejka.pop();
 
+#ifdef _DEBUG
+		std::cout << s << " ";
+#endif
+
 		Visited[s] = 1;
 		for (size_t i = 0; i < n; i++)
 		{

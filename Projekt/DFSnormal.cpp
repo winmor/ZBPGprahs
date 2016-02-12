@@ -8,6 +8,9 @@ void depthFirstVisit(base::graphMatrix G, bool * Visited, int i, size_t n);
 
 void depthFirst(base::graphMatrix G, bool *Visited, size_t n)
 {
+#ifdef _DEBUG
+	std::cout << std::endl;
+#endif
 	for (size_t i = 0; i < n; i++) {
 		Visited[i] = 0;
 	}

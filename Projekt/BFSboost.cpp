@@ -2,10 +2,17 @@
 #include "Graph.h"
 #include <boost\graph\breadth_first_search.hpp>
 #include <chrono>
+#ifdef _DEBUG
+#include <iostream>
+#endif
 class BFSVisitor : public boost::default_bfs_visitor {
 public:
 	template<typename Vertex, typename Graph>
-	void discoverVertex(Vertex u, const Graph & g) const {}
+	void discover_vertex(Vertex u, const Graph & g) const {
+#ifdef _DEBUG
+		std::cout << u << " ";
+#endif
+	}
 
 };
 

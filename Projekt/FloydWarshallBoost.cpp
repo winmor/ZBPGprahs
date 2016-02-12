@@ -17,7 +17,7 @@ void FloydWarshallBoost(std::shared_ptr<Graph> graph, int i, int j)
 
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
-#ifdef DEBUG
+#ifdef _DEBUG
 	std::cout << "       ";
 	for (size_t k = 0; k < graph->size(); ++k) {
 		std::cout << std::setw(5) << k;

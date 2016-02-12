@@ -2,7 +2,7 @@
 #include "Exploration.h"
 #include "DataExp.h"
 #include <iomanip> 
-GraphVector constructGraphs(size_t numberProbes, int size, int fill);
+GraphVector constructGraphs(unsigned int numberProbes, int size, int fill);
 typedef std::map<unsigned int, Duration> probeDuration;
 
 probeDuration DFSduration(probeCount graphs)
@@ -97,11 +97,11 @@ void printResults(size_t sizes[], int size, std::vector<probeDuration> probes)
 	}
 }
 
-void DFSexploration(size_t sizes[])
+void DFSexploration(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
 	probeCount  level33 = createGraphs(sizes, length, numberProbes, 33);
@@ -112,11 +112,11 @@ void DFSexploration(size_t sizes[])
 
 	printResults(sizes, length, probes);
 }
-void BFSexploration(size_t sizes[])
+void BFSexploration(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
 	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
@@ -129,12 +129,12 @@ void BFSexploration(size_t sizes[])
 	printResults(sizes, length, probes);
 }
 
-void FloydWarshallExploration(size_t sizes[])
+void FloydWarshallExploration(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
 
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
 	probeCount  level33 = createGraphs(sizes, length, numberProbes, 33);
@@ -147,12 +147,12 @@ void FloydWarshallExploration(size_t sizes[])
 }
 
 
-void Dijkstra(size_t sizes[])
+void Dijkstra(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
 
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
 	probeCount  level33 = createGraphs(sizes, length, numberProbes, 33);
@@ -163,11 +163,12 @@ void Dijkstra(size_t sizes[])
 
 	printResults(sizes, length, probes);
 }
-void BellmanFordExploration(size_t sizes[])
+void BellmanFordExploration(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
+	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
 	probeCount  level33 = createGraphs(sizes, length, numberProbes, 33);
@@ -178,11 +179,11 @@ void BellmanFordExploration(size_t sizes[])
 
 	printResults(sizes, length, probes);
 }
-void JohnsonExploration(size_t sizes[])
+void JohnsonExploration(size_t sizes[], size_t length)
 {
 	std::vector<probeDuration> probes(3);
 	size_t numberProbes = 4;
-	size_t length = sizeof(sizes) / sizeof(size_t);
+	
 	probeCount  level100 = createGraphs(sizes, length, numberProbes, 100);
 	probeCount  level66 = createGraphs(sizes, length, numberProbes, 66);
 	probeCount  level33 = createGraphs(sizes, length, numberProbes, 33);
@@ -195,28 +196,33 @@ void JohnsonExploration(size_t sizes[])
 }
 void exploration()
 {
-	//size_t sizesDFSBFS[] = { 3000,4000 };
-	//std::cout << "DFS" << std::endl;
-	//DFSexploration(sizesDFSBFS);
-	//std::cout << "BFS" << std::endl;
-	//BFSexploration(sizesDFSBFS);
-	//size_t sizesFW[] = { 300,400 };
-	//std::cout << "FW" << std::endl;
-	//FloydWarshallExploration(sizesFW);
-	//size_t sizesDjikstra[] = { 250,1250 };
-	//std::cout << "Dijkstra" << std::endl;
-	//Dijkstra(sizesDjikstra);
-	//size_t sizesBF[] = { 250,1250 };
-	//std::cout << "Bellman Ford" << std::endl;
-	//BellmanFordExploration(sizesBF);
-	 size_t sizesJohnson[] = { 250,450 };
+	size_t sizesDFSBFS[] = {2000, 4000,6000, 8000, 10000 };
+	size_t lengthDFSBFS = sizeof(sizesDFSBFS) / sizeof(size_t);
+	std::cout << "DFS" << std::endl;
+	DFSexploration(sizesDFSBFS, lengthDFSBFS);
+	std::cout << "BFS" << std::endl;
+	BFSexploration(sizesDFSBFS, lengthDFSBFS);
+	size_t sizesFW[] = { 100,200,300,400,500 };
+	size_t lengthFW = sizeof(sizesFW) / sizeof(size_t);
+	std::cout << "FW" << std::endl;
+	FloydWarshallExploration(sizesFW, lengthFW);
+	size_t sizesDjikstra[] = { 200,400,600,800,1000 };
+	size_t lengthDj = sizeof(sizesDjikstra) / sizeof(size_t);
+	std::cout << "Dijkstra" << std::endl;
+	Dijkstra(sizesDjikstra, lengthDj);
+	size_t sizesBF[] = { 200,400,600,800,1000 };
+	size_t lengthBF = sizeof(sizesBF) / sizeof(size_t);
+	std::cout << "Bellman Ford" << std::endl;
+	BellmanFordExploration(sizesBF, lengthBF);
+	 size_t sizesJohnson[] = { 100,200,300,400,500};
+	 size_t lengthSJ = sizeof(sizesJohnson) / sizeof(size_t);
 	std::cout << "Johnson" << std::endl;
-	JohnsonExploration(sizesJohnson)
+	JohnsonExploration(sizesJohnson,lengthSJ);
 
 
 }
 
-probeCount createGraphs(size_t sizes[], int length, size_t numberProbes, unsigned short fill)
+probeCount createGraphs(size_t sizes[], size_t length, size_t numberProbes, unsigned short fill)
 {
 	probeCount graphs;
 	for (int i = 0; i < length; i++)
@@ -226,7 +232,7 @@ probeCount createGraphs(size_t sizes[], int length, size_t numberProbes, unsigne
 	return graphs;
 }
 
-GraphVector constructGraphs(size_t numberProbes, int size, int fill)
+GraphVector constructGraphs(unsigned int numberProbes, int size, int fill)
 {
 	GraphVector graphs(numberProbes);
 	for (size_t i = 0; i < numberProbes; i++)

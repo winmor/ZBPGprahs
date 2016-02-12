@@ -281,7 +281,7 @@ Duration johnsonExperiment(GraphVector graphs)
 		JohnsonNormal(graphs[i], 1, 10);
 
 		result.searchStadndardDuration += graphs[i]->printTime(1, 10);
-		graphs[i]->calcBothTime(8);
+		graphs[i]->calcBothTime(10);
 		result.standardAllDuration += graphs[i]->printTime(2, 10);
 
 

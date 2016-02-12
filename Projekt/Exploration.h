@@ -5,4 +5,4 @@ typedef std::map<unsigned int, GraphVector> probeCount;
 
 void exploration();
 
-probeCount createGraphs(size_t sizes[], int length, size_t numberProbesl, unsigned short fill);
+probeCount createGraphs(size_t sizes[], size_t length, size_t numberProbesl, unsigned short fill);
