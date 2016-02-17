@@ -21,7 +21,6 @@ void BellmanFordNormal(std::shared_ptr<Graph> graph, int i, int j)
 
 bool BellmanFord(base::graphMatrix G, unsigned int source, size_t n, std::vector<double>& d)
 {
-
 	//init
 	d.clear();
 	std::vector<double> p;
@@ -32,7 +31,6 @@ bool BellmanFord(base::graphMatrix G, unsigned int source, size_t n, std::vector
 		p.push_back(0);
 	}
 	d[source] = 0;
-
 	//relaksacja
 	for (unsigned int i = 1; i < n; ++i) {
 		for (unsigned int u = 0; u < n; ++u) {
@@ -48,7 +46,6 @@ bool BellmanFord(base::graphMatrix G, unsigned int source, size_t n, std::vector
 		}
 	}
 	//czy sa ujemne cykle
-
 	for (unsigned int u = 0; u < n; ++u) {
 		for (unsigned int v = 0; v < n; ++v) {
 			int edgeWeight = G[u][v];

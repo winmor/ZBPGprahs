@@ -10,16 +10,14 @@ void breadthFirst(base::graphMatrix Graph, bool *Visited, size_t n)
 		Visited[i] = 0;
 	}
 	kolejka.push(0);
-	
+
 	while (!kolejka.empty())
 	{
 		int s = kolejka.front();
 		kolejka.pop();
-
 #ifdef _DEBUG
 		std::cout << s << " ";
 #endif
-
 		Visited[s] = 1;
 		for (size_t i = 0; i < n; i++)
 		{
@@ -32,7 +30,6 @@ void breadthFirst(base::graphMatrix Graph, bool *Visited, size_t n)
 			}
 		}
 	}
-
 }
 
 void BFSstandard(std::shared_ptr<Graph> graph, int i, int j)

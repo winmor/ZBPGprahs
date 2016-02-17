@@ -7,7 +7,7 @@
 int main()
 {
 	startExperiment();
-	debugTest();
+	//debugTest();
 	memoryTest();
 }
 

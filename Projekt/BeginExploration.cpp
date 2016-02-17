@@ -240,7 +240,7 @@ void memoryTest()
 	{ 
 		
 		std::cout << "Liczba wierzcholkow: "<< size << std::endl;
-		Graph* genGraph = new Graph(size, 100);
+		Graph* genGraph = new Graph(size, 33);
 		genGraph->standardGraph();
 		std::cout << "Graf standardowy wygenerowany"<<std::endl;
 		system("pause");
@@ -256,7 +256,7 @@ void memoryTest()
 		system("pause");
 		genGraph->freeAll();
 		genGraph->standardGraph();
-		genGraph->boostJohnson();
+		genGraph->boostDirectedGraph();
 		genGraph->freeGraphStandard();
 		std::cout << "Graf adjency_list  skierowany wygenerowany" << std::endl;
 		system("pause");

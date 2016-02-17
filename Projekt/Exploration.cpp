@@ -196,7 +196,7 @@ void JohnsonExploration(size_t sizes[], size_t length)
 }
 void exploration()
 {
-	size_t sizesDFSBFS[] = {2000, 4000,6000, 8000, 10000 };
+	/*size_t sizesDFSBFS[] = {2000, 4000,6000, 8000, 10000 };
 	size_t lengthDFSBFS = sizeof(sizesDFSBFS) / sizeof(size_t);
 	std::cout << "DFS" << std::endl;
 	DFSexploration(sizesDFSBFS, lengthDFSBFS);
@@ -209,15 +209,15 @@ void exploration()
 	size_t sizesDjikstra[] = { 200,400,600,800,1000 };
 	size_t lengthDj = sizeof(sizesDjikstra) / sizeof(size_t);
 	std::cout << "Dijkstra" << std::endl;
-	Dijkstra(sizesDjikstra, lengthDj);
+	Dijkstra(sizesDjikstra, lengthDj);*/
 	size_t sizesBF[] = { 200,400,600,800,1000 };
 	size_t lengthBF = sizeof(sizesBF) / sizeof(size_t);
 	std::cout << "Bellman Ford" << std::endl;
 	BellmanFordExploration(sizesBF, lengthBF);
-	 size_t sizesJohnson[] = { 100,200,300,400,500};
+	/* size_t sizesJohnson[] = { 100,200,300,400,500};
 	 size_t lengthSJ = sizeof(sizesJohnson) / sizeof(size_t);
 	std::cout << "Johnson" << std::endl;
-	JohnsonExploration(sizesJohnson,lengthSJ);
+	JohnsonExploration(sizesJohnson,lengthSJ);*/
 
 
 }

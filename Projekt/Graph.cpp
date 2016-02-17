@@ -63,50 +63,50 @@ std::shared_ptr<Graph::boostNoWeightedGraph> Graph::boostSimpleGraph()
 std::shared_ptr<Graph::boostWeightGraph> Graph::boostWeightedGraph()
 {
 	
-	if (!matrixBoostWeightedGraph)
+	if (!adjListBoostWeightedGraph)
 	{
 		Graph::boostWeightGraph* p = new boostWeightGraph();
-		matrixBoostWeightedGraph = std::shared_ptr<boostWeightGraph>(p);
+		adjListBoostWeightedGraph = std::shared_ptr<boostWeightGraph>(p);
 		boost::graph_traits<boostWeightGraph>::vertex_descriptor u, v;
 	
 		for (size_t i = 0; i < mSize; i++) {
 			for (size_t j = 0; j < i;j++) {
 				if (matrixStandardGraph[i][j] != base::withoutEdge)
 				{
-					u = boost::vertex(i, *matrixBoostWeightedGraph);
-					v = boost::vertex(j, *matrixBoostWeightedGraph);
-					boost::add_edge(u, v, matrixStandardGraph[i][j], *matrixBoostWeightedGraph);
+					u = boost::vertex(i, *adjListBoostWeightedGraph);
+					v = boost::vertex(j, *adjListBoostWeightedGraph);
+					boost::add_edge(u, v, matrixStandardGraph[i][j], *adjListBoostWeightedGraph);
 				}
 			}
 		}
 	}
-	return matrixBoostWeightedGraph;
+	return adjListBoostWeightedGraph;
 }
 
 
 
-std::shared_ptr<Graph::boostDirectedJohnson> Graph::boostJohnson()
+std::shared_ptr<Graph::boostDirected> Graph::boostDirectedGraph()
 {
-	if (!matrixBoostJohnsonGraph)
+	if (!adjListBoostDirectedGraph)
 	{
-		Graph::boostDirectedJohnson* p = new boostDirectedJohnson();
-		matrixBoostJohnsonGraph = std::shared_ptr<boostDirectedJohnson>(p);
-		boost::graph_traits<boostDirectedJohnson>::vertex_descriptor u, v;
+		Graph::boostDirected* p = new boostDirected();
+		adjListBoostDirectedGraph = std::shared_ptr<boostDirected>(p);
+		boost::graph_traits<boostDirected>::vertex_descriptor u, v;
 		for (size_t i = 0; i < mSize; i++)
 		{
 			for (size_t j = 0; j < i; j++)
 			{
 				if (matrixStandardGraph[i][j] != base::withoutEdge)
 				{
-					u = boost::vertex(i, *matrixBoostJohnsonGraph);
-					v = boost::vertex(j, *matrixBoostJohnsonGraph);
-					boost::add_edge(u, v, matrixStandardGraph[i][j], *matrixBoostJohnsonGraph);
+					u = boost::vertex(i, *adjListBoostDirectedGraph);
+					v = boost::vertex(j, *adjListBoostDirectedGraph);
+					boost::add_edge(u, v, matrixStandardGraph[i][j], *adjListBoostDirectedGraph);
 				}
 			}
 		}
 
 	}
-	return matrixBoostJohnsonGraph;
+	return adjListBoostDirectedGraph;
 }
 
 Graph::boostNoWeightedGraph::vertex_descriptor Graph::boostInitVertex()
@@ -198,8 +198,8 @@ void Graph::freeGraphStandard()
 void Graph::freeGraphBoost()
 {
 	matrixBoostSimpleGraph.reset();
-	matrixBoostWeightedGraph.reset();
-	matrixBoostJohnsonGraph.reset();
+	adjListBoostWeightedGraph.reset();
+	adjListBoostDirectedGraph.reset();
 }
 
 void Graph::freeAll()

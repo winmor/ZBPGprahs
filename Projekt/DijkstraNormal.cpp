@@ -77,9 +77,6 @@ void dijkstraStandart(std::shared_ptr<Graph> graph, int i, int j)
 	dijkstra(G, 0, graph -> size(), d);
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
-
-
-
 #ifdef _DEBUG
 	for (int i = 0; i < d.size(); ++i) {
 		std::cout << 0 << " --> " << i << " : " << d[i] << std::endl;

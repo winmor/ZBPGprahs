@@ -14,7 +14,7 @@ protected:
 public:
 	typedef boost::adjacency_matrix<boost::undirectedS> boostNoWeightedGraph;
 	typedef boost::adjacency_list <boost::vecS, boost::vecS, boost::undirectedS, boost::no_property, weightProperty> boostWeightGraph;
-	typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::directedS, boost::no_property, boost::property<boost::edge_weight_t, int, boost::property<boost::edge_weight2_t, int> > > boostDirectedJohnson;
+	typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::directedS, boost::no_property, boost::property<boost::edge_weight_t, int, boost::property<boost::edge_weight2_t, int> > > boostDirected;
 	typedef std::pair<int, int> Edge;
 
 		
@@ -30,8 +30,8 @@ protected:
 	base::weight maxWeight;
 	base::weight randomEdge();
 	std::shared_ptr<boostNoWeightedGraph> matrixBoostSimpleGraph;
-	std::shared_ptr<boostWeightGraph> matrixBoostWeightedGraph;
-	std::shared_ptr<boostDirectedJohnson> matrixBoostJohnsonGraph;
+	std::shared_ptr<boostWeightGraph> adjListBoostWeightedGraph;
+	std::shared_ptr<boostDirected> adjListBoostDirectedGraph;
 	
 	 
 
@@ -40,7 +40,7 @@ public:
 	virtual base::graphMatrix standardGraph();
 	std::shared_ptr<boostNoWeightedGraph> boostSimpleGraph();
 	std::shared_ptr<boostWeightGraph> boostWeightedGraph();
-	std::shared_ptr<boostDirectedJohnson> boostJohnson();
+	std::shared_ptr<boostDirected> boostDirectedGraph();
 	boostNoWeightedGraph::vertex_descriptor boostInitVertex();
 	Graph(size_t size, int fill);
 	void print();
