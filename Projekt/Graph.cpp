@@ -8,7 +8,7 @@ base::weight Graph::randomEdge()
 {
 	bool connected = (rand() % 100) < mFill;
 
-	return connected ? (1 + rand() % 9) : base::withoutEdge;
+	return connected ? (1 + rand() % 9999) : base::withoutEdge;
 	//if (connected)
 	//{
 	//	return 1 + rand() % 9;
@@ -59,6 +59,24 @@ std::shared_ptr<Graph::boostNoWeightedGraph> Graph::boostSimpleGraph()
 	}
 	return matrixBoostSimpleGraph;
 }
+std::shared_ptr<Graph::boostWeightedMatrix> Graph::boostWeightedMatrixSimpleGraph()
+{
+	if (!matrixBoostWeightedSimpleGraph)
+	{
+		Graph::boostWeightedMatrix* p = new boostWeightedMatrix(mSize);
+		matrixBoostWeightedSimpleGraph = std::shared_ptr<boostWeightedMatrix>(p);
+		for (size_t i = 0; i < mSize; i++) {
+			for (size_t j = 0; j < i; j++)
+			{
+				if (matrixStandardGraph[i][j] != base::withoutEdge)
+				{
+					boost::add_edge(i, j, matrixStandardGraph[i][j], *matrixBoostWeightedSimpleGraph);
+				}
+			}
+		}
+	}
+	return matrixBoostWeightedSimpleGraph;
+}
 
 std::shared_ptr<Graph::boostWeightGraph> Graph::boostWeightedGraph()
 {
@@ -82,6 +100,11 @@ std::shared_ptr<Graph::boostWeightGraph> Graph::boostWeightedGraph()
 	}
 	return adjListBoostWeightedGraph;
 }
+
+
+
+
+
 
 
 
@@ -200,6 +223,7 @@ void Graph::freeGraphBoost()
 	matrixBoostSimpleGraph.reset();
 	adjListBoostWeightedGraph.reset();
 	adjListBoostDirectedGraph.reset();
+	matrixBoostWeightedSimpleGraph.reset();
 }
 
 void Graph::freeAll()

@@ -123,7 +123,7 @@
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\winmo\Desktop\boost_1_55_0\boost_1_55_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -227,7 +227,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\winmo\Desktop\boost_1_55_0\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
@@ -244,6 +244,7 @@
     <ClInclude Include="baseGraph.h" />
     <ClInclude Include="BeginExploration.h" />
     <ClInclude Include="BellmanFordBoost.h" />
+    <ClInclude Include="BellmanFordBoostAdjMatrix.h" />
     <ClInclude Include="BellmanFordNormal.h" />
     <ClInclude Include="BFSboost.h" />
     <ClInclude Include="BFSnormal.h" />
@@ -251,18 +252,22 @@
     <ClInclude Include="DFSboost.h" />
     <ClInclude Include="DFSnormal.h" />
     <ClInclude Include="DijkstraBoost.h" />
+    <ClInclude Include="DijkstraBoostAdjMatrix.h" />
     <ClInclude Include="DijkstraNormal.h" />
     <ClInclude Include="Exploration.h" />
     <ClInclude Include="FloydWarshallBoost.h" />
+    <ClInclude Include="FloydWarshallBoostAdjMatrix.h" />
     <ClInclude Include="FloydWarshallNormal.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="JohnsonBoost.h" />
+    <ClInclude Include="JohnsonBoostAdjMatrix.h" />
     <ClInclude Include="JohnsonNormal.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BeginExploration.cpp" />
     <ClCompile Include="BellmanFordBoost.cpp" />
+    <ClCompile Include="BellmanFordBoostAdjMatrix.cpp" />
     <ClCompile Include="BellmanFordNormal.cpp" />
     <ClCompile Include="BFSboost.cpp" />
     <ClCompile Include="BFSnormal.cpp" />
@@ -270,12 +275,15 @@
     <ClCompile Include="DFSboost.cpp" />
     <ClCompile Include="DFSnormal.cpp" />
     <ClCompile Include="DijkstraBoost.cpp" />
+    <ClCompile Include="DijkstraBoostAdjMatrix.cpp" />
     <ClCompile Include="DijkstraNormal.cpp" />
     <ClCompile Include="Exploration.cpp" />
     <ClCompile Include="FloydWarshallBoost.cpp" />
+    <ClCompile Include="FloydWarshallBoostAdjMatrix.cpp" />
     <ClCompile Include="FloydWarshallNormal.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="JohnsonBoost.cpp" />
+    <ClCompile Include="JohnsonBoostAdjMatrix.cpp" />
     <ClCompile Include="JohnsonNormal.cpp" />
     <ClCompile Include="Projekt.cpp" />
   </ItemGroup>

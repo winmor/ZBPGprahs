@@ -5,11 +5,13 @@ struct Duration
 {
 	double createStandardDuration;
 	double createBoostDuration;
+	double createBoostDurationMatrixAdj;
 	double searchStadndardDuration;
-	double searchBoostDuration;
-	
+	double searchBoostDurationMatrix;
+	double searchBoostDurationAdjList;
 	double standardAllDuration;
-	double boostAllDuration;
+	double boostAllDurationAdjList;
+	double boostAllDurationMatrix;
 };
 
 typedef std::vector<std::shared_ptr<Graph>> GraphVector;

@@ -57,11 +57,7 @@ bool dijkstra(base::graphMatrix G, unsigned int source, size_t n, std::vector<do
 				}
 			}
 		}
-		if (minDinQ != INT_MAX)
-		{
-			Q.erase(u);
-			S.insert(u);
-		}
+
 
 		
 	}

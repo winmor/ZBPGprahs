@@ -1,3 +1,1001 @@
-﻿  BeginExploration.cpp
+﻿  BFSboost.cpp
   Unknown compiler version - please run the configure tests and report the results
-  Projekt.vcxproj -> C:\Users\winmo\Documents\GitHub\ZBPGprahs\Win32\Debug\Projekt.exe
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<T>::~InputIterator(void)'
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  BFSboost.cpp(31): note: see reference to function template instantiation 'boost::InputIterator<T>::~InputIterator(void)' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::InputIterator<T>' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::InputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(54): note: see reference to class template instantiation 'boost::concepts::require<boost::InputIterator<T>>' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(53): note: while compiling class template member function 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>::~MultiPassInputIterator(void)'
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  BFSboost.cpp(31): note: see reference to function template instantiation 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>::~MultiPassInputIterator(void)' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(87): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(86): note: while compiling class template member function 'boost::concepts::IncidenceGraph<G>::~IncidenceGraph(void)'
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  BFSboost.cpp(31): note: see reference to function template instantiation 'boost::concepts::IncidenceGraph<G>::~IncidenceGraph(void)' being compiled
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(75): note: see reference to class template instantiation 'boost::concepts::IncidenceGraph<G>' being compiled
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::IncidenceGraphConcept<IncidenceGraph>' being compiled
+          with
+          [
+              IncidenceGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::IncidenceGraphConcept<Graph::boostNoWeightedGraph>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(64): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::IncidenceGraphConcept<IncidenceGraph>>' being compiled
+          with
+          [
+              IncidenceGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(124): note: see reference to function template instantiation 'void boost::breadth_first_visit<VertexListGraph,Buffer,BFSVisitor,ColorMap,SourceIterator>(const IncidenceGraph &,SourceIterator,SourceIterator,Buffer &,BFSVisitor,ColorMap)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              Buffer=queue_t,
+              BFSVisitor=BFSVisitor,
+              ColorMap=boost::two_bit_color_map<boost::typed_identity_property_map<size_t>>,
+              SourceIterator=unsigned int *,
+              IncidenceGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(135): note: see reference to function template instantiation 'void boost::breadth_first_search<VertexListGraph,unsigned int*,Buffer,BFSVisitor,ColorMap>(const VertexListGraph &,SourceIterator,SourceIterator,Buffer &,BFSVisitor,ColorMap)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              Buffer=queue_t,
+              BFSVisitor=BFSVisitor,
+              ColorMap=boost::two_bit_color_map<boost::typed_identity_property_map<size_t>>,
+              SourceIterator=unsigned int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(260): note: see reference to function template instantiation 'void boost::breadth_first_search<VertexListGraph,T,BFSVisitor,ColorMap>(const VertexListGraph &,unsigned int,Buffer &,BFSVisitor,ColorMap)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              T=queue_t,
+              BFSVisitor=BFSVisitor,
+              ColorMap=boost::two_bit_color_map<boost::typed_identity_property_map<size_t>>,
+              Buffer=queue_t
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(324): note: see reference to function template instantiation 'void boost::detail::bfs_helper<VertexListGraph,boost::two_bit_color_map<boost::typed_identity_property_map<size_t>>,P,BFSVisitor,boost::graph_visitor_t,boost::no_property>(VertexListGraph &,unsigned int,ColorMap,BFSVisitor,const boost::bgl_named_params<BFSVisitor,boost::graph_visitor_t,boost::no_property> &,boost::mpl::false_)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              P=BFSVisitor,
+              ColorMap=boost::two_bit_color_map<boost::typed_identity_property_map<size_t>>,
+              BFSVisitor=BFSVisitor
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(345): note: see reference to function template instantiation 'void boost::detail::bfs_dispatch<boost::param_not_found>::apply<VertexListGraph,BFSVisitor,boost::graph_visitor_t,boost::no_property>(VertexListGraph &,unsigned int,const boost::bgl_named_params<BFSVisitor,boost::graph_visitor_t,boost::no_property> &,boost::param_not_found)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph
+          ]
+  BFSboost.cpp(25): note: see reference to function template instantiation 'void boost::breadth_first_search<_Ty,BFSVisitor,boost::graph_visitor_t,boost::no_property>(const VertexListGraph &,unsigned int,const boost::bgl_named_params<BFSVisitor,boost::graph_visitor_t,boost::no_property> &)' being compiled
+          with
+          [
+              _Ty=Graph::boostNoWeightedGraph,
+              VertexListGraph=Graph::boostNoWeightedGraph
+          ]
+BFSboost.cpp(11): warning C4100: 'g': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\breadth_first_search.hpp(75): note: see reference to function template instantiation 'void BFSVisitor::discover_vertex<Vertex,IncidenceGraph>(Vertex,const Graph &) const' being compiled
+          with
+          [
+              IncidenceGraph=Graph::boostNoWeightedGraph,
+              Vertex=Vertex,
+              Graph=Graph::boostNoWeightedGraph
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(78): warning C4800: 'const char': forcing value to bool 'true' or 'false' (performance warning)
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(285): note: see reference to function template instantiation 'bool boost::detail::get_edge_exists<char>(const EdgeProxy &,...)' being compiled
+          with
+          [
+              EdgeProxy=char
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(284): note: while compiling class template member function 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const'
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/iterator_facade.hpp(514): note: see reference to function template instantiation 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(571): note: see reference to class template instantiation 'boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/detail/iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/iterator_categories.hpp(161): note: see reference to class template instantiation 'boost::detail::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/filter_iterator.hpp(33): note: see reference to class template instantiation 'boost::iterator_traversal<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/filter_iterator.hpp(45): note: see reference to class template instantiation 'boost::detail::filter_iterator_base<Predicate,Iterator>' being compiled
+          with
+          [
+              Predicate=boost::detail::does_edge_exist,
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(571): note: see reference to class template instantiation 'boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/detail/iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_iterator.hpp(55): note: see reference to class template instantiation 'boost::detail::iterator_traits<OutEdgeIter>' being compiled
+          with
+          [
+              OutEdgeIter=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(569): note: see reference to class template instantiation 'boost::adjacency_iterator_generator<boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>,unsigned int,boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo_000\documents\github\zbpgprahs\projekt\Graph.h(52): note: see reference to class template instantiation 'boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>' being compiled
+  BFSnormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  BeginExploration.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  BellmanFordBoost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<T>::~InputIterator(void)'
+          with
+          [
+              T=boost::range_detail::integer_iterator<unsigned int>
+          ]
+  BellmanFordBoost.cpp(36): note: see reference to function template instantiation 'boost::InputIterator<T>::~InputIterator(void)' being compiled
+          with
+          [
+              T=boost::range_detail::integer_iterator<unsigned int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::InputIterator<T>' being compiled
+          with
+          [
+              T=boost::range_detail::integer_iterator<unsigned int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::InputIterator<boost::range_detail::integer_iterator<unsigned int>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(54): note: see reference to class template instantiation 'boost::concepts::require<boost::InputIterator<T>>' being compiled
+          with
+          [
+              T=boost::range_detail::integer_iterator<unsigned int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(53): note: while compiling class template member function 'boost::concepts::MultiPassInputIterator<boost::range_detail::integer_iterator<Integer>>::~MultiPassInputIterator(void)'
+          with
+          [
+              Integer=unsigned int
+          ]
+  BellmanFordBoost.cpp(36): note: see reference to function template instantiation 'boost::concepts::MultiPassInputIterator<boost::range_detail::integer_iterator<Integer>>::~MultiPassInputIterator(void)' being compiled
+          with
+          [
+              Integer=unsigned int
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::MultiPassInputIterator<boost::range_detail::integer_iterator<Integer>>' being compiled
+          with
+          [
+              Integer=unsigned int
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::MultiPassInputIterator<boost::range_detail::integer_iterator<unsigned int>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(183): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::MultiPassInputIterator<boost::range_detail::integer_iterator<Integer>>>' being compiled
+          with
+          [
+              Integer=unsigned int
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(182): note: while compiling class template member function 'boost::concepts::VertexListGraph<G>::~VertexListGraph(void)'
+          with
+          [
+              G=Graph::boostWeightGraph
+          ]
+  BellmanFordBoost.cpp(36): note: see reference to function template instantiation 'boost::concepts::VertexListGraph<G>::~VertexListGraph(void)' being compiled
+          with
+          [
+              G=Graph::boostWeightGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(174): note: see reference to class template instantiation 'boost::concepts::VertexListGraph<G>' being compiled
+          with
+          [
+              G=Graph::boostWeightGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::VertexListGraphConcept<VertexAndEdgeListGraph>' being compiled
+          with
+          [
+              VertexAndEdgeListGraph=Graph::boostWeightGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::VertexListGraphConcept<Graph::boostWeightGraph>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\bellman_ford_shortest_paths.hpp(231): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::VertexListGraphConcept<VertexAndEdgeListGraph>>' being compiled
+          with
+          [
+              VertexAndEdgeListGraph=Graph::boostWeightGraph
+          ]
+  BellmanFordBoost.cpp(22): note: see reference to function template instantiation 'bool boost::bellman_ford_shortest_paths<Graph::boostWeightGraph,int*,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>>(VertexAndEdgeListGraph &,const boost::bgl_named_params<int *,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>> &)' being compiled
+          with
+          [
+              VertexAndEdgeListGraph=Graph::boostWeightGraph
+          ]
+  BellmanFordNormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+BellmanFordNormal.cpp(16): warning C4457: declaration of 'i' hides function parameter
+  BellmanFordNormal.cpp(3): note: see declaration of 'i'
+BellmanFordNormal.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  DFSboost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+DFSboost.cpp(14): warning C4100: 'g': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(41): note: see reference to function template instantiation 'void DFSVisitor::discover_vertex<unsigned int,Graph>(Vertex,const Graph &) const' being compiled
+          with
+          [
+              Graph=Graph::boostNoWeightedGraph,
+              Vertex=unsigned int
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(37): note: while compiling class template member function 'void boost::DFSVisitorConcept<DFSVisitor,VertexListGraph>::constraints(void)'
+          with
+          [
+              DFSVisitor=const DFSVisitor,
+              VertexListGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::DFSVisitorConcept<DFSVisitor,VertexListGraph>' being compiled
+          with
+          [
+              DFSVisitor=const DFSVisitor,
+              VertexListGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::DFSVisitorConcept<DFSVisitor,Graph::boostNoWeightedGraph>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(215): note: see reference to class template instantiation 'boost::concepts::require<boost::DFSVisitorConcept<DFSVisitor,VertexListGraph>>' being compiled
+          with
+          [
+              DFSVisitor=const DFSVisitor,
+              VertexListGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(326): note: see reference to function template instantiation 'void boost::depth_first_search<Graph,const Arg,boost::shared_array_property_map<Value,boost::typed_identity_property_map<size_t>>>(const VertexListGraph &,DFSVisitor,ColorMap,unsigned int)' being compiled
+          with
+          [
+              Graph=Graph::boostNoWeightedGraph,
+              Arg=const DFSVisitor,
+              Value=boost::default_color_type,
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              DFSVisitor=const DFSVisitor,
+              ColorMap=boost::shared_array_property_map<boost::default_color_type,boost::typed_identity_property_map<size_t>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(330): note: see reference to function template instantiation 'void boost::graph::detail::depth_first_search_impl<_Ty>::operator ()<ArgPack>(const Graph &,const ArgPack &) const' being compiled
+          with
+          [
+              _Ty=Graph::boostNoWeightedGraph,
+              ArgPack=arg_pack_type,
+              Graph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(330): note: see reference to function template instantiation 'void boost::graph::detail::depth_first_search_impl<_Ty>::operator ()<ArgPack>(const Graph &,const ArgPack &) const' being compiled
+          with
+          [
+              _Ty=Graph::boostNoWeightedGraph,
+              ArgPack=arg_pack_type,
+              Graph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(333): note: see reference to function template instantiation 'void boost::graph::depth_first_search_with_named_params<Param0,arg_pack_type>(const Param0 &,const ArgPack &)' being compiled
+          with
+          [
+              Param0=Graph::boostNoWeightedGraph,
+              ArgPack=arg_pack_type
+          ]
+  DFSboost.cpp(28): note: see reference to function template instantiation 'void boost::depth_first_search<_Ty,DFSVisitor,boost::graph_visitor_t,boost::no_property>(const Param0 &,const boost::bgl_named_params<DFSVisitor,boost::graph_visitor_t,boost::no_property> &)' being compiled
+          with
+          [
+              _Ty=Graph::boostNoWeightedGraph,
+              Param0=Graph::boostNoWeightedGraph
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<T>::~InputIterator(void)'
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  DFSboost.cpp(35): note: see reference to function template instantiation 'boost::InputIterator<T>::~InputIterator(void)' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::InputIterator<T>' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::InputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(54): note: see reference to class template instantiation 'boost::concepts::require<boost::InputIterator<T>>' being compiled
+          with
+          [
+              T=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(53): note: while compiling class template member function 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>::~MultiPassInputIterator(void)'
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  DFSboost.cpp(35): note: see reference to function template instantiation 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>::~MultiPassInputIterator(void)' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(87): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::MultiPassInputIterator<boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(86): note: while compiling class template member function 'boost::concepts::IncidenceGraph<G>::~IncidenceGraph(void)'
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  DFSboost.cpp(35): note: see reference to function template instantiation 'boost::concepts::IncidenceGraph<G>::~IncidenceGraph(void)' being compiled
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/graph_concepts.hpp(75): note: see reference to class template instantiation 'boost::concepts::IncidenceGraph<G>' being compiled
+          with
+          [
+              G=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::concepts::IncidenceGraphConcept<IncidenceGraph>' being compiled
+          with
+          [
+              IncidenceGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::concepts::IncidenceGraphConcept<Graph::boostNoWeightedGraph>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(107): note: see reference to class template instantiation 'boost::concepts::require<boost::concepts::IncidenceGraphConcept<IncidenceGraph>>' being compiled
+          with
+          [
+              IncidenceGraph=Graph::boostNoWeightedGraph
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/depth_first_search.hpp(227): note: see reference to function template instantiation 'void boost::detail::depth_first_visit_impl<VertexListGraph,DFSVisitor,ColorMap,boost::detail::nontruth2>(const IncidenceGraph &,unsigned int,DFSVisitor &,ColorMap,TerminatorFunc)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostNoWeightedGraph,
+              DFSVisitor=const DFSVisitor,
+              ColorMap=boost::shared_array_property_map<boost::default_color_type,boost::typed_identity_property_map<size_t>>,
+              IncidenceGraph=Graph::boostNoWeightedGraph,
+              TerminatorFunc=boost::detail::nontruth2
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(78): warning C4800: 'const char': forcing value to bool 'true' or 'false' (performance warning)
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(285): note: see reference to function template instantiation 'bool boost::detail::get_edge_exists<char>(const EdgeProxy &,...)' being compiled
+          with
+          [
+              EdgeProxy=char
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(284): note: while compiling class template member function 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const'
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/iterator_facade.hpp(514): note: see reference to function template instantiation 'boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor> boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>::dereference(void) const' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(571): note: see reference to class template instantiation 'boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/detail/iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/iterator_categories.hpp(161): note: see reference to class template instantiation 'boost::detail::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/filter_iterator.hpp(33): note: see reference to class template instantiation 'boost::iterator_traversal<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/iterator/filter_iterator.hpp(45): note: see reference to class template instantiation 'boost::detail::filter_iterator_base<Predicate,Iterator>' being compiled
+          with
+          [
+              Predicate=boost::detail::does_edge_exist,
+              Iterator=boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(571): note: see reference to class template instantiation 'boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/detail/iterator.hpp(83): note: see reference to class template instantiation 'std::iterator_traits<Iterator>' being compiled
+          with
+          [
+              Iterator=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_iterator.hpp(55): note: see reference to class template instantiation 'boost::detail::iterator_traits<OutEdgeIter>' being compiled
+          with
+          [
+              OutEdgeIter=boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<boost::undirectedS>::vertex_descriptor>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(569): note: see reference to class template instantiation 'boost::adjacency_iterator_generator<boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>,unsigned int,boost::filter_iterator<boost::detail::does_edge_exist,boost::detail::undir_adj_matrix_out_edge_iter<unsigned int,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<char>>>,unsigned int,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>>>>' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  c:\users\winmo_000\documents\github\zbpgprahs\projekt\Graph.h(52): note: see reference to class template instantiation 'boost::adjacency_matrix<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>' being compiled
+  DFSnormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  DataExp.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  DijkstraBoost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<TT>::~InputIterator(void)'
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  DijkstraBoost.cpp(38): note: see reference to function template instantiation 'boost::InputIterator<TT>::~InputIterator(void)' being compiled
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(545): note: see reference to class template instantiation 'boost::InputIterator<TT>' being compiled
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(573): note: see reference to class template instantiation 'boost::ForwardIterator<TT>' being compiled
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(602): note: see reference to class template instantiation 'boost::BidirectionalIterator<TT>' being compiled
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(600): note: see reference to class template instantiation 'boost::RandomAccessIterator<TT>' being compiled
+          with
+          [
+              TT=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::RandomAccessIteratorConcept<RAIter>' being compiled
+          with
+          [
+              RAIter=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::RandomAccessIteratorConcept<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(45): note: see reference to class template instantiation 'boost::concepts::require<Model>' being compiled
+          with
+          [
+              Model=boost::RandomAccessIteratorConcept<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/property_map/property_map.hpp(418): note: see reference to function template instantiation 'void boost::function_requires<boost::RandomAccessIteratorConcept<RAIter>>(Model *)' being compiled
+          with
+          [
+              RAIter=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>,
+              Model=boost::RandomAccessIteratorConcept<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\dijkstra_shortest_paths.hpp(594): note: see reference to function template instantiation 'boost::iterator_property_map<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>,IndexMap,unsigned int,unsigned int &> boost::make_iterator_property_map<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>,unsigned int,IndexMap>(RAIter,ID,Value)' being compiled
+          with
+          [
+              IndexMap=boost::vec_adj_list_vertex_id_map<boost::no_property,unsigned int>,
+              RAIter=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned int>>>,
+              ID=boost::vec_adj_list_vertex_id_map<boost::no_property,unsigned int>,
+              Value=unsigned int
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\graph\dijkstra_shortest_paths.hpp(614): note: see reference to function template instantiation 'void boost::detail::dijkstra_dispatch1<VertexListGraph,int*,boost::adj_list_edge_property_map<boost::undirected_tag,unsigned int,const unsigned int &,unsigned int,const Property,Tag>,boost::vec_adj_list_vertex_id_map<boost::no_property,unsigned int>,boost::bgl_named_params<int *,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>>>(const VertexListGraph &,unsigned int,DistanceMap,WeightMap,IndexMap,const Params &)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostWeightGraph,
+              Property=boost::property<boost::edge_weight_t,base::weight,boost::no_property>,
+              Tag=boost::edge_weight_t,
+              DistanceMap=int *,
+              WeightMap=boost::adj_list_edge_property_map<boost::undirected_tag,unsigned int,const unsigned int &,unsigned int,const boost::property<boost::edge_weight_t,base::weight,boost::no_property>,boost::edge_weight_t>,
+              IndexMap=boost::vec_adj_list_vertex_id_map<boost::no_property,unsigned int>,
+              Params=boost::bgl_named_params<int *,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>>
+          ]
+  DijkstraBoost.cpp(21): note: see reference to function template instantiation 'void boost::dijkstra_shortest_paths<Graph::boostWeightGraph,int*,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>>(const VertexListGraph &,unsigned int,const boost::bgl_named_params<int *,boost::vertex_distance_t,boost::bgl_named_params<unsigned int *,boost::vertex_predecessor_t,boost::no_property>> &)' being compiled
+          with
+          [
+              VertexListGraph=Graph::boostWeightGraph
+          ]
+  DijkstraNormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+DijkstraNormal.cpp(29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+DijkstraNormal.cpp(77): warning C4457: declaration of 'i' hides function parameter
+  DijkstraNormal.cpp(67): note: see declaration of 'i'
+DijkstraNormal.cpp(77): warning C4018: '<': signed/unsigned mismatch
+  Exploration.cpp
+  Unknown compiler version - please run the configure tests and report the results
+Exploration.cpp(71): warning C4018: '<': signed/unsigned mismatch
+Exploration.cpp(228): warning C4018: '<': signed/unsigned mismatch
+  FloydWarshallBoost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+FloydWarshallBoost.cpp(42): warning C4457: declaration of 'i' hides function parameter
+  FloydWarshallBoost.cpp(10): note: see declaration of 'i'
+FloydWarshallBoost.cpp(44): warning C4457: declaration of 'j' hides function parameter
+  FloydWarshallBoost.cpp(10): note: see declaration of 'j'
+FloydWarshallBoost.cpp(45): warning C4389: '==': signed/unsigned mismatch
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(378): warning C4459: declaration of 'extents' hides global declaration
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/base.hpp(70): note: see declaration of 'boost::`anonymous-namespace'::extents'
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(368): note: while compiling class template member function 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)'
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(115): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(418): note: see reference to class template instantiation 'boost::const_multi_array_ref<T,2,T *>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost\multi_array.hpp(113): note: see reference to class template instantiation 'boost::multi_array_ref<T,2>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  FloydWarshallBoost.cpp(17): note: see reference to class template instantiation 'boost::multi_array<base::weight,2,std::allocator<T>>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(1097): warning C4100: 'g': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(1097): note: while compiling class template member function 'boost::function_property_map<boost::adj_mat_pm_helper<D,VP,EP,GP,A,Tag,boost::property_kind<boost::edge_weight_t>::type>::lookup_property_from_edge<boost::mpl::false_>,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,unsigned int &> boost::adj_mat_pm_helper<D,VP,EP,GP,A,Tag,boost::property_kind<boost::edge_weight_t>::type>::get_nonconst(boost::adjacency_matrix<Directed,boost::no_property,Graph::weightProperty,boost::no_property,std::allocator<bool>> &,Tag)'
+          with
+          [
+              D=boost::undirectedS,
+              VP=boost::no_property,
+              EP=Graph::weightProperty,
+              GP=boost::no_property,
+              A=std::allocator<bool>,
+              Tag=boost::edge_weight_t,
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(1124): note: see reference to function template instantiation 'boost::function_property_map<boost::adj_mat_pm_helper<D,VP,EP,GP,A,Tag,boost::property_kind<boost::edge_weight_t>::type>::lookup_property_from_edge<boost::mpl::false_>,boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,unsigned int &> boost::adj_mat_pm_helper<D,VP,EP,GP,A,Tag,boost::property_kind<boost::edge_weight_t>::type>::get_nonconst(boost::adjacency_matrix<Directed,boost::no_property,Graph::weightProperty,boost::no_property,std::allocator<bool>> &,Tag)' being compiled
+          with
+          [
+              D=boost::undirectedS,
+              VP=boost::no_property,
+              EP=Graph::weightProperty,
+              GP=boost::no_property,
+              A=std::allocator<bool>,
+              Tag=boost::edge_weight_t,
+              Directed=boost::undirectedS
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(1118): note: see reference to class template instantiation 'boost::adj_mat_pm_helper<D,VP,EP,GP,A,Tag,boost::property_kind<boost::edge_weight_t>::type>' being compiled
+          with
+          [
+              D=boost::undirectedS,
+              VP=boost::no_property,
+              EP=Graph::weightProperty,
+              GP=boost::no_property,
+              A=std::allocator<bool>,
+              Tag=boost::edge_weight_t
+          ]
+  FloydWarshallBoost.cpp(18): note: see reference to class template instantiation 'boost::property_map<Graph::boostWeightedMatrix,boost::edge_weight_t,void>' being compiled
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<TT>::~InputIterator(void)'
+          with
+          [
+              TT=int *
+          ]
+  FloydWarshallBoost.cpp(56): note: see reference to function template instantiation 'boost::InputIterator<TT>::~InputIterator(void)' being compiled
+          with
+          [
+              TT=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(505): note: see reference to class template instantiation 'boost::InputIterator<TT>' being compiled
+          with
+          [
+              TT=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::InputIteratorConcept<InputIterator>' being compiled
+          with
+          [
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(45): note: see reference to class template instantiation 'boost::concepts::require<Model>' being compiled
+          with
+          [
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(395): note: see reference to function template instantiation 'void boost::function_requires<boost::InputIteratorConcept<InputIterator>>(Model *)' being compiled
+          with
+          [
+              InputIterator=int *,
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(383): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_multi_array_ref<int*>(InputIterator)' being compiled
+          with
+          [
+              T=base::weight,
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(383): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_multi_array_ref<int*>(InputIterator)' being compiled
+          with
+          [
+              T=base::weight,
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(368): note: while compiling class template member function 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)'
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(115): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  FloydWarshallNormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+FloydWarshallNormal.cpp(27): warning C4457: declaration of 'i' hides function parameter
+  FloydWarshallNormal.cpp(19): note: see declaration of 'i'
+FloydWarshallNormal.cpp(43): warning C4457: declaration of 'i' hides function parameter
+  FloydWarshallNormal.cpp(19): note: see declaration of 'i'
+FloydWarshallNormal.cpp(45): warning C4457: declaration of 'j' hides function parameter
+  FloydWarshallNormal.cpp(19): note: see declaration of 'j'
+FloydWarshallNormal.cpp(57): warning C4457: declaration of 'i' hides function parameter
+  FloydWarshallNormal.cpp(19): note: see declaration of 'i'
+  Graph.cpp
+  Unknown compiler version - please run the configure tests and report the results
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(668): warning C4127: conditional expression is constant
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(667): note: while compiling class template member function 'std::pair<bool,boost::property<boost::edge_weight_t,base::weight,boost::no_property>> &boost::adjacency_matrix<boost::undirectedS,boost::no_property,Graph::weightProperty,boost::no_property,std::allocator<bool>>::get_edge(unsigned int,unsigned int)'
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(927): note: see reference to function template instantiation 'std::pair<bool,boost::property<boost::edge_weight_t,base::weight,boost::no_property>> &boost::adjacency_matrix<boost::undirectedS,boost::no_property,Graph::weightProperty,boost::no_property,std::allocator<bool>>::get_edge(unsigned int,unsigned int)' being compiled
+  Graph.cpp(64): note: see reference to class template instantiation 'boost::adjacency_matrix<boost::undirectedS,boost::no_property,Graph::weightProperty,boost::no_property,std::allocator<bool>>' being compiled
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(78): warning C4800: 'const char': forcing value to bool 'true' or 'false' (performance warning)
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(927): note: see reference to function template instantiation 'bool boost::detail::get_edge_exists<char>(const EdgeProxy &,...)' being compiled
+          with
+          [
+              EdgeProxy=char
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/graph/adjacency_matrix.hpp(947): note: see reference to function template instantiation 'std::pair<boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,bool> boost::add_edge<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>,EP>(unsigned int,unsigned int,const EP2 &,boost::adjacency_matrix<Directed,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>> &)' being compiled
+          with
+          [
+              Directed=boost::undirectedS,
+              EP=boost::no_property,
+              EP2=boost::no_property
+          ]
+  Graph.cpp(55): note: see reference to function template instantiation 'std::pair<boost::detail::matrix_edge_desc_impl<boost::undirected_tag,boost::adjacency_matrix_traits<Directed>::vertex_descriptor>,bool> boost::add_edge<boost::undirectedS,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>>(unsigned int,unsigned int,boost::adjacency_matrix<Directed,boost::no_property,boost::no_property,boost::no_property,std::allocator<bool>> &)' being compiled
+          with
+          [
+              Directed=boost::undirectedS
+          ]
+  JohnsonBoost.cpp
+  Unknown compiler version - please run the configure tests and report the results
+JohnsonBoost.cpp(34): warning C4457: declaration of 'i' hides function parameter
+  JohnsonBoost.cpp(17): note: see declaration of 'i'
+JohnsonBoost.cpp(36): warning C4457: declaration of 'j' hides function parameter
+  JohnsonBoost.cpp(17): note: see declaration of 'j'
+JohnsonBoost.cpp(37): warning C4389: '==': signed/unsigned mismatch
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(378): warning C4459: declaration of 'extents' hides global declaration
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/base.hpp(70): note: see declaration of 'boost::`anonymous-namespace'::extents'
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(368): note: while compiling class template member function 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)'
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(115): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(418): note: see reference to class template instantiation 'boost::const_multi_array_ref<T,2,T *>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array.hpp(113): note: see reference to class template instantiation 'boost::multi_array_ref<T,2>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  JohnsonBoost.cpp(24): note: see reference to class template instantiation 'boost::multi_array<base::weight,2,std::allocator<T>>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(370): warning C4459: declaration of 'extents' hides global declaration
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/base.hpp(70): note: see declaration of 'boost::`anonymous-namespace'::extents'
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(370): note: while compiling class template member function 'boost::detail::multi_array::sub_array<T,1>::sub_array(T *,const unsigned int *,const int *,const int *)'
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/base.hpp(140): note: see reference to function template instantiation 'boost::detail::multi_array::sub_array<T,1>::sub_array(T *,const unsigned int *,const int *,const int *)' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  JohnsonBoost.cpp(37): note: see reference to class template instantiation 'boost::detail::multi_array::sub_array<T,1>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(182): warning C4459: declaration of 'extents' hides global declaration
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/base.hpp(70): note: see declaration of 'boost::`anonymous-namespace'::extents'
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(182): note: while compiling class template member function 'boost::detail::multi_array::const_sub_array<T,1,T *>::const_sub_array(TPtr,const unsigned int *,const int *,const int *)'
+          with
+          [
+              T=base::weight,
+              TPtr=base::weight *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(374): note: see reference to function template instantiation 'boost::detail::multi_array::const_sub_array<T,1,T *>::const_sub_array(TPtr,const unsigned int *,const int *,const int *)' being compiled
+          with
+          [
+              T=base::weight,
+              TPtr=base::weight *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/subarray.hpp(207): note: see reference to class template instantiation 'boost::detail::multi_array::const_sub_array<T,1,T *>' being compiled
+          with
+          [
+              T=base::weight
+          ]
+C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(22): warning C4100: 'x': unreferenced formal parameter
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(23): note: while compiling class template member function 'void boost::concepts::check<Model>::failed(Model *)'
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(61): note: see reference to class template instantiation 'boost::concepts::check<Model>' being compiled
+          with
+          [
+              Model=boost::SignedInteger<int>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(517): note: see reference to class template instantiation 'boost::concepts::require<boost::SignedInteger<int>>' being compiled
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(516): note: while compiling class template member function 'boost::InputIterator<TT>::~InputIterator(void)'
+          with
+          [
+              TT=int *
+          ]
+  JohnsonBoost.cpp(46): note: see reference to function template instantiation 'boost::InputIterator<TT>::~InputIterator(void)' being compiled
+          with
+          [
+              TT=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(505): note: see reference to class template instantiation 'boost::InputIterator<TT>' being compiled
+          with
+          [
+              TT=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/has_constraints.hpp(42): note: see reference to class template instantiation 'boost::InputIteratorConcept<InputIterator>' being compiled
+          with
+          [
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept/detail/msvc.hpp(53): note: see reference to class template instantiation 'boost::concepts::not_satisfied<Model>' being compiled
+          with
+          [
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/concept_check.hpp(45): note: see reference to class template instantiation 'boost::concepts::require<Model>' being compiled
+          with
+          [
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(395): note: see reference to function template instantiation 'void boost::function_requires<boost::InputIteratorConcept<InputIterator>>(Model *)' being compiled
+          with
+          [
+              InputIterator=int *,
+              Model=boost::InputIteratorConcept<int *>
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(383): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_multi_array_ref<int*>(InputIterator)' being compiled
+          with
+          [
+              T=base::weight,
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(383): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_multi_array_ref<int*>(InputIterator)' being compiled
+          with
+          [
+              T=base::weight,
+              InputIterator=int *
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(368): note: while compiling class template member function 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)'
+          with
+          [
+              T=base::weight
+          ]
+  C:\Users\winmo_000\Desktop\boost_1_55_0\boost_1_55_0\boost/multi_array/multi_array_ref.hpp(115): note: see reference to function template instantiation 'void boost::const_multi_array_ref<T,2,T *>::init_from_extent_gen(const boost::detail::multi_array::extent_gen<2> &)' being compiled
+          with
+          [
+              T=base::weight
+          ]
+  JohnsonNormal.cpp
+  Unknown compiler version - please run the configure tests and report the results
+JohnsonNormal.cpp(50): warning C4244: '=': conversion from 'double' to 'base::weight', possible loss of data
+JohnsonNormal.cpp(11): warning C4100: 'source': unreferenced formal parameter
+JohnsonNormal.cpp(85): warning C4457: declaration of 'i' hides function parameter
+  JohnsonNormal.cpp(67): note: see declaration of 'i'
+JohnsonNormal.cpp(87): warning C4457: declaration of 'j' hides function parameter
+  JohnsonNormal.cpp(67): note: see declaration of 'j'
+  Generating Code...
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\documents\github\zbpgprahs\projekt\dijkstranormal.cpp(50): warning C4701: potentially uninitialized local variable 'u' used
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+c:\users\winmo_000\desktop\boost_1_55_0\boost_1_55_0\boost\graph\named_function_params.hpp(240): warning C4172: returning address of local variable or temporary
+  Projekt.vcxproj -> C:\Users\winmo_000\Documents\GitHub\ZBPGprahs\Win32\Debug\Projekt.exe

@@ -18,6 +18,8 @@ bool johnson(base::graphMatrix G, unsigned int source, size_t n, std::vector<std
 	size_t size_G2 = n + 1;
 
 	base::graphMatrix G2 = new base::weight*[size_G2];
+
+
 	base::weight* s = new base::weight[size_G2]{};
 	G2[0] = s;
 

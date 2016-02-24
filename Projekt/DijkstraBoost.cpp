@@ -11,10 +11,13 @@ void dijkstraBoost(std::shared_ptr<Graph> graph, int i, int j)
 {
 	using namespace std::chrono;
 	high_resolution_clock::time_point begin = high_resolution_clock::now();
+
 	Graph::boostWeightGraph g = *graph->boostWeightedGraph();
-	typedef graph_traits<Graph::boostWeightGraph>::vertex_descriptor vertex_descriptor;
+
+	typedef graph_traits<Graph::boostNoWeightedGraph>::vertex_descriptor vertex_descriptor;
 	std::vector<vertex_descriptor> parent(num_vertices(g));
 	std::vector<int> distance(num_vertices(g));
+
 	dijkstra_shortest_paths(g, graph->boostInitVertex(), predecessor_map(&parent[0]).distance_map(&distance[0]));
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	

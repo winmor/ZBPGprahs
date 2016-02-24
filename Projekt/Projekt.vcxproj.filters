@@ -87,6 +87,18 @@
     <ClInclude Include="BellmanFordBoost.h">
       <Filter>Header Files\Search</Filter>
     </ClInclude>
+    <ClInclude Include="FloydWarshallBoostAdjMatrix.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstraBoostAdjMatrix.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BellmanFordBoostAdjMatrix.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="JohnsonBoostAdjMatrix.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Projekt.cpp">
@@ -138,6 +150,18 @@
       <Filter>Source Files\Search</Filter>
     </ClCompile>
     <ClCompile Include="BellmanFordBoost.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="FloydWarshallBoostAdjMatrix.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstraBoostAdjMatrix.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="BellmanFordBoostAdjMatrix.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="JohnsonBoostAdjMatrix.cpp">
       <Filter>Source Files\Search</Filter>
     </ClCompile>
   </ItemGroup>

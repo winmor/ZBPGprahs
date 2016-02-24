@@ -13,6 +13,9 @@ protected:
 	typedef boost::property<boost::edge_weight_t, base::weight> weightProperty;
 public:
 	typedef boost::adjacency_matrix<boost::undirectedS> boostNoWeightedGraph;
+
+	typedef boost::adjacency_matrix<boost::undirectedS, boost::no_property, weightProperty> boostWeightedMatrix;
+
 	typedef boost::adjacency_list <boost::vecS, boost::vecS, boost::undirectedS, boost::no_property, weightProperty> boostWeightGraph;
 	typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::directedS, boost::no_property, boost::property<boost::edge_weight_t, int, boost::property<boost::edge_weight2_t, int> > > boostDirected;
 	typedef std::pair<int, int> Edge;
@@ -23,13 +26,14 @@ public:
 protected:
 	const size_t mSize;
 	int mFill;
-	double duration[3][12];
+	double duration[3][16];
 
 	base::graphMatrix matrixStandardGraph= NULL;
 	base::weight minWeight;
 	base::weight maxWeight;
 	base::weight randomEdge();
 	std::shared_ptr<boostNoWeightedGraph> matrixBoostSimpleGraph;
+	std::shared_ptr<boostWeightedMatrix> matrixBoostWeightedSimpleGraph;
 	std::shared_ptr<boostWeightGraph> adjListBoostWeightedGraph;
 	std::shared_ptr<boostDirected> adjListBoostDirectedGraph;
 	
@@ -40,6 +44,10 @@ public:
 	virtual base::graphMatrix standardGraph();
 	std::shared_ptr<boostNoWeightedGraph> boostSimpleGraph();
 	std::shared_ptr<boostWeightGraph> boostWeightedGraph();
+
+
+	std::shared_ptr<boostWeightedMatrix> boostWeightedMatrixSimpleGraph();
+
 	std::shared_ptr<boostDirected> boostDirectedGraph();
 	boostNoWeightedGraph::vertex_descriptor boostInitVertex();
 	Graph(size_t size, int fill);

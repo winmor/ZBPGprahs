@@ -8,6 +8,5 @@ int main()
 {
 	startExperiment();
 	//debugTest();
-	memoryTest();
+	//memoryTest();
 }
-

@@ -18,10 +18,12 @@ void floydWarshall(base::graphMatrix G, size_t n)
 
 void FloydWarshallNormal(std::shared_ptr<Graph> graph, int i, int j)
 {
-	base::graphMatrix matrixStandardGraph = graph->standardGraph();
 	using namespace std::chrono;
-	base::graphMatrix D = new base::weight*[graph->size()];
 	high_resolution_clock::time_point begin = high_resolution_clock::now();
+	base::graphMatrix matrixStandardGraph = graph->standardGraph();
+	
+	base::graphMatrix D = new base::weight*[graph->size()];
+	
 	for (size_t i = 0; i < graph->size(); i++)
 	{
 		D[i] = new base::weight[graph->size()];

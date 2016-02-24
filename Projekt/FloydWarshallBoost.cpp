@@ -1,19 +1,35 @@
-#include "FloydWarshallBoost.h"
+#include "FloydWarshallBoostAdjMatrix.h"
 #include <iomanip>
 #include <iostream>
 #include <boost\multi_array.hpp>
+#include <boost/graph/undirected_graph.hpp>
+#include <boost/graph/exterior_property.hpp>
 #include <boost\graph\floyd_warshall_shortest.hpp>
 #include <chrono>
 
 void FloydWarshallBoost(std::shared_ptr<Graph> graph, int i, int j)
 {
 	using namespace std::chrono;
+	
+	Graph::boostWeightGraph g = *graph->boostWeightedGraph();
+
+
+
+	typedef boost::property_map<Graph::boostWeightGraph, boost::edge_weight_t>::type WeightMap;
+
+	
+	typedef boost::exterior_vertex_property<Graph::boostWeightGraph, base::weight> DistanceProperty;
+	typedef DistanceProperty::matrix_type DistanceMatrix;
+	typedef DistanceProperty::matrix_map_type DistanceMatrixMap;
+
+	WeightMap weight_pmap = boost::get(boost::edge_weight, g);
+
+	
+	DistanceMatrix distances(num_vertices(g));
+	DistanceMatrixMap dm(distances, g);
 	high_resolution_clock::time_point begin = high_resolution_clock::now();
-
-	typedef boost::multi_array<base::weight, 2> array_type;
-
-	array_type D(boost::extents[graph->size()][graph->size()]);
-	boost::floyd_warshall_all_pairs_shortest_paths(*graph->boostWeightedGraph(), D);
+	boost::floyd_warshall_all_pairs_shortest_paths(g, dm,
+		boost::weight_map(weight_pmap));
 
 	duration<double> timeSpan = duration_cast<duration<double>>(high_resolution_clock::now() - begin);
 	graph->setExpTime(i, j, timeSpan.count());
@@ -26,11 +42,11 @@ void FloydWarshallBoost(std::shared_ptr<Graph> graph, int i, int j)
 	for (size_t i = 0; i < graph->size(); ++i) {
 		std::cout << std::setw(3) << i << " -> ";
 		for (size_t j = 0; j < graph->size(); ++j) {
-			if (D[i][j] == (std::numeric_limits<int>::max)()) {
+			if (distances[i][j] == (std::numeric_limits<int>::max)()) {
 				std::cout << std::setw(5) << "x";
 			}
 			else {
-				std::cout << std::setw(5) << D[i][j];
+				std::cout << std::setw(5) << distances[i][j];
 			}
 		}
 		std::cout << std::endl;

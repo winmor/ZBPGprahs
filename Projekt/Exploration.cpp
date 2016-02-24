@@ -72,7 +72,7 @@ void printResults(size_t sizes[], int size, std::vector<probeDuration> probes)
 	{
 		int k = 0;
 		std::cout << std::endl << "###########  Liczba wierzcholkow: " << sizes[i] << std::endl << std::endl;
-		std::cout << "Tworzenie stand\tTworzenie boost\tSzukanie stand\tSzukanie boost\tSuma stand\tSuma boost\t" << std::endl << std::endl;
+		std::cout << "Tworzenie stand\tTworzenie boost\tTworzenie boost adjmatrix\tSzukanie stand\tSzukanie boost\tSzukanie boost adjMatrix\tSuma stand\tSuma boost\tSuma boost adjMatrix\t" << std::endl << std::endl;
 		for (std::vector<probeDuration>::iterator it = probes.begin(); it != probes.end(); it++)
 		{
 			if (k == 0)
@@ -91,7 +91,7 @@ void printResults(size_t sizes[], int size, std::vector<probeDuration> probes)
 
 			}
 				
-				std::cout << std::setprecision(4) << (*it)[sizes[i]].createStandardDuration << "\t\t" << (*it)[sizes[i]].createBoostDuration << "\t\t" << (*it)[sizes[i]].searchStadndardDuration << "\t\t" << (*it)[sizes[i]].searchBoostDuration << "\t\t" << (*it)[sizes[i]].standardAllDuration << "\t\t" << (*it)[sizes[i]].boostAllDuration << "\t\t" << std::endl<< std::endl;
+				std::cout << std::setprecision(4) << (*it)[sizes[i]].createStandardDuration << "\t\t" << (*it)[sizes[i]].createBoostDuration << "\t\t" << (*it)[sizes[i]].createBoostDurationMatrixAdj << "\t\t" << (*it)[sizes[i]].searchStadndardDuration << "\t\t" << (*it)[sizes[i]].searchBoostDurationAdjList << "\t\t" << (*it)[sizes[i]].searchBoostDurationMatrix << "\t\t" << (*it)[sizes[i]].standardAllDuration << "\t\t" << (*it)[sizes[i]].boostAllDurationAdjList << "\t\t" << (*it)[sizes[i]].boostAllDurationMatrix << "\t\t" << std::endl<< std::endl;
 				k++;
 		}
 	}
@@ -196,28 +196,28 @@ void JohnsonExploration(size_t sizes[], size_t length)
 }
 void exploration()
 {
-	/*size_t sizesDFSBFS[] = {2000, 4000,6000, 8000, 10000 };
+/*	size_t sizesDFSBFS[] = { 10000 };
 	size_t lengthDFSBFS = sizeof(sizesDFSBFS) / sizeof(size_t);
 	std::cout << "DFS" << std::endl;
 	DFSexploration(sizesDFSBFS, lengthDFSBFS);
 	std::cout << "BFS" << std::endl;
 	BFSexploration(sizesDFSBFS, lengthDFSBFS);
-	size_t sizesFW[] = { 100,200,300,400,500 };
+	size_t sizesFW[] = { 100,200,300,400,500};
 	size_t lengthFW = sizeof(sizesFW) / sizeof(size_t);
 	std::cout << "FW" << std::endl;
 	FloydWarshallExploration(sizesFW, lengthFW);
 	size_t sizesDjikstra[] = { 200,400,600,800,1000 };
 	size_t lengthDj = sizeof(sizesDjikstra) / sizeof(size_t);
 	std::cout << "Dijkstra" << std::endl;
-	Dijkstra(sizesDjikstra, lengthDj);*/
+	Dijkstra(sizesDjikstra, lengthDj);
 	size_t sizesBF[] = { 200,400,600,800,1000 };
 	size_t lengthBF = sizeof(sizesBF) / sizeof(size_t);
 	std::cout << "Bellman Ford" << std::endl;
-	BellmanFordExploration(sizesBF, lengthBF);
-	/* size_t sizesJohnson[] = { 100,200,300,400,500};
+	BellmanFordExploration(sizesBF, lengthBF);*/
+	size_t sizesJohnson[] = { 100,200,300,400,500};
 	 size_t lengthSJ = sizeof(sizesJohnson) / sizeof(size_t);
 	std::cout << "Johnson" << std::endl;
-	JohnsonExploration(sizesJohnson,lengthSJ);*/
+	JohnsonExploration(sizesJohnson,lengthSJ);
 
 
 }
